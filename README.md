@@ -4,20 +4,13 @@
 
 This repository contains an R-based analysis pipeline for single cell RNA sequencing (scRNA-seq) data. The pipeline processes and analyzes a dataset of 2,700 single cells (sequenced on the Illumina NextSeq 500) using popular bioinformatics tools and packages such as Seurat and SingleR. The analysis covers quality control, normalization, variable feature identification, dimensionality reduction (PCA and UMAP), clustering, differential expression, and cell type annotation.
 
-## Overview
-
-The provided Jupyter Notebook (using the R kernel) implements the following tasks:
-
-- **Loading Required Libraries:** Utilizes packages such as `dplyr`, `Seurat`, `patchwork`, `ggplot2`, `SingleR`, and others for a seamless analysis workflow.
-- **Data Import:** Reads in the filtered gene expression matrix generated from 10X Genomics data.
-- **Quality Control & Filtering:** Calculates mitochondrial gene percentages and creates QC plots (violin and scatter plots). Filters cells based on minimum feature counts and mitochondrial content.
-- **Normalization & Feature Selection:** Normalizes the data and identifies highly variable features.
-- **Dimensionality Reduction & Clustering:** Scales the data, runs PCA for dimension reduction, performs clustering (using graph-based methods), and visualizes clusters with UMAP.
-- **Differential Expression Analysis:** Identifies differentially expressed markers across clusters and extracts the top 3 markers for each cluster.
-- **Cell Type Annotation:** Uses the SingleR package with the Human Primary Cell Atlas reference to assign cell type labels and compares them to the Seurat-derived clusters.
 
 ## Repo Contents
-. ├── filtered_gene_bc_matrices/ │ └── hg19/ # Directory containing raw 10X Genomics data. ├── sc_analysis_results_pbmc/ # Output directory for generated plots and results. ├── analysis_notebook.ipynb # Jupyter Notebook with the analysis pipeline. └── README.md # This file.
+
+- **pbmc3k_filtered_gene_bc_matrices.tar.gz**: gzip-compressed tar archive containing raw 10X Genomics data
+- **sc_analysis_results_pbmc**: Output directory for generated plots and results
+- **sc_analysis_wf.ipynb**: Jupyter Notebook with the analysis pipeline
+- **README.md**: This file
 
 ## Analysis Workflow
 
